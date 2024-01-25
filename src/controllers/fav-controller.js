@@ -28,7 +28,21 @@ async function getAllFav(req, res) {
     }
 }
 
+async function removeStock(req, res) {
+    try {
+        const fav = await FavService.removeStock(req.params.id);
+        successResponse.data = fav;
+        return res.status(StatusCodes.OK)
+                    .json(successResponse);
+    } catch (error) {
+        errorResponse.error = error;
+        return res.status(error.statusCode).
+                    json(errorResponse);
+    }
+}
+
 module.exports = {
     addToFav,
     getAllFav,
+    removeStock,
 }

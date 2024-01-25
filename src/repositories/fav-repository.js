@@ -17,7 +17,6 @@ class FavRepository extends CrudRepository {
         const favStocks = await Fav.find().populate({
                                         path : 'stockId',
                                     });
-console.log('fav : ', favStocks);
         return favStocks;
     }
 }

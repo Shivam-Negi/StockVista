@@ -26,7 +26,23 @@ async function getAllFav() {
     }
 }
 
+async function removeStock(stockId) {
+    try {
+        const stock = await favRepository.destroy(stockId);
+        if(!stock) {
+            throw new AppError('no stock exist for the given stockId',StatusCodes.BAD_REQUEST);
+          }
+    } catch (error) {
+        if(error instanceof AppError) throw error;
+            throw new AppError(
+                'Cannot delete from the database',
+                StatusCodes.INTERNAL_SERVER_ERROR
+            ); 
+    }
+}
+
 module.exports = {
     addToFav,
     getAllFav,
+    removeStock,
 }

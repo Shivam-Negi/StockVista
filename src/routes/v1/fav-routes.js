@@ -6,4 +6,6 @@ router.post('/', FavController.addToFav);
 
 router.get('/', FavController.getAllFav);
 
+router.delete('/:id', FavController.removeStock);
+
 module.exports = router;
