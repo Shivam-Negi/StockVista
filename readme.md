@@ -35,9 +35,11 @@ Lets take a look inside the `src` folder:
     ```
         PORT = 3000
     ```
+    - Add mongo url
     ```
         MONGO_URL = mongodb://localhost:27017/StockVista
     ```
+    - Add zip url
     ```
         ZIP_URL = 'https://www.bseindia.com/download/BhavCopy/Equity/EQ240124_CSV.ZIP'
     ```
@@ -45,4 +47,9 @@ Lets take a look inside the `src` folder:
  - To run the server execute
  ```
  npm start
+ ```
+
+ - API Documentation
+ ```
+    https://documenter.getpostman.com/view/26806893/2s9YypFP25
  ```
