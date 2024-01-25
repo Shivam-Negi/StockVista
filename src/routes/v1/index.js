@@ -5,6 +5,6 @@ const stockRoutes = require('./stock-routes');
 const favRoutes = require('./fav-routes');
 
 router.use('/stock', stockRoutes);
-// router.use('/fav', favRoutes);
+router.use('/fav', favRoutes);
 
 module.exports = router;

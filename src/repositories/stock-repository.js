@@ -28,6 +28,15 @@ class StockRepository extends CrudRepository {
         });
         return stock;
     }
+
+    async findStock(stockId) {
+        const stock = await Stock.findOne({
+            _id : stockId
+        });
+        if(stock)
+            return stockId;
+        return null;
+    }
 }
 
 module.exports = StockRepository;

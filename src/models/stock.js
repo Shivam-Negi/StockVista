@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-// const { currentDate } = require('../utils/helpers/datetime-helpers');
 
 const stockSchema = new mongoose.Schema({
   code: {
