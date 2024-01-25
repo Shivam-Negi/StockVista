@@ -12,7 +12,7 @@ app.use('/api', router);
 
 app.listen(serverConfig.PORT, async () => {
     console.log(`server listening on port : ${serverConfig.PORT}`);
-    database.connect();
+    await database.connect();
     console.log('mongoose connnected');
     await download.downloadAndExtractData();
     await process.processCSVAndStore();
